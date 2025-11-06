@@ -11,6 +11,7 @@ const navLinks = [
   { to: '/about', label: 'About' },
   { to: '/experience', label: 'Experience' },
   { to: '/education', label: 'Education' },
+  { to: '/volunteering', label: 'Volunteering' },
   { to: '/portfolio', label: 'Portfolio' },
   { to: '/contact', label: 'Contact' },
 ];
