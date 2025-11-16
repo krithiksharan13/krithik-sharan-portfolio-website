@@ -3,6 +3,13 @@ import { ExperienceItem } from './professionalExperience';
 
 export const otherExperiences: ExperienceItem[] = [
   {
+    role: 'Post Graduate(Taught) Faculty Officer',
+    company: 'The University of Leeds - Leeds University Union',
+    duration: 'November 2025 - present',
+    description: 'Selected as the Faculty Officer Representing all the Engineering and Physical Sciences Departments.',
+    achievements: [],
+  },
+  {
     role: 'Freelance UI Designer',
     company: 'Org Linked',
     duration: 'December 2024',
