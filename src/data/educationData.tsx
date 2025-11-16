@@ -69,7 +69,7 @@ export const educationData = [
         <h4 className="font-semibold mb-2 text-foreground">Core Modules:</h4>
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
-            {['Data Science', 'Learning Skills through C', 'Dissertation in Data Science and Analytics'].map(course => <Badge key={course} variant="secondary" className="text-sm font-normal">{course}</Badge>)}
+            {['Data Science', 'Learning Skills through Case Studies', 'Dissertation in Data Science and Analytics'].map(course => <Badge key={course} variant="secondary" className="text-sm font-normal">{course}</Badge>)}
           </div>
         </div>
         <h4 className="font-semibold mb-2 text-foreground">Elective Modules:</h4>

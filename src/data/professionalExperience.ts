@@ -12,7 +12,7 @@ export const professionalExperiences: ExperienceItem[] = [
   {
     role: 'Data Analyst-BI Developer',
     company: 'Radiant Ventures',
-    duration: 'November 2024 - September 2024',
+    duration: 'November 2024 - September 2025',
     description: 'Worked as a investment risk professional who reduced client losses by 25% through data-driven A/B testing and comprehensive portfolio analysis. I specialized in cross-functional collaboration to optimize workflows, cutting redundancy by 40% and aligning risk strategy with business growth.',
     achievements: [
       'Designed and executed A/B tests on risk communication involving over 250 users and ₹30+ Lakh in investments, resulting in a 25% reduction in investment losses and increased preference for low-risk products.',

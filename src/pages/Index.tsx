@@ -60,7 +60,7 @@ const Index = () => {
             <SectionHeader title="Latest Experience" />
             <div className="max-w-3xl mx-auto text-center text-lg text-foreground/80 space-y-4 mb-8">
                 <h3 className="text-2xl font-semibold text-primary">Data Analyst-BI Developer</h3>
-                <p className="font-medium text-xl">Radiant Ventures | November 2024 - Present</p>
+                <p className="font-medium text-xl">Radiant Ventures | November 2024 - September 2025</p>
                 <p>
                   Led data analysis initiatives across multiple departments, developed interactive dashboards, and implemented machine learning models to predict the Risk Factor of Investment.
                 </p>
