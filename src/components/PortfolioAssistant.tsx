@@ -17,7 +17,7 @@ const PortfolioAssistant = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hello! I'm Krithik Sharan S A's AI Portfolio Assistant. I can answer any questions you have about their professional background, projects, and skills based on the information provided here.",
+      content: "Hello! I'm Krithik's AI Portfolio Assistant. I can answer any questions you have my professional background, projects, and skills based on the information provided here.",
     },
   ]);
   const [input, setInput] = useState('');
