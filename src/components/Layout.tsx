@@ -3,10 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { useVisitorTracking } from '@/hooks/useVisitorTracking';
 
 const Layout = () => {
-  useVisitorTracking();
 
   return (
     <div className="bg-background text-foreground flex flex-col min-h-screen">

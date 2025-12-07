@@ -1,7 +1,6 @@
 
 import Hero from '@/components/Hero';
 import ProjectCard from '@/components/ProjectCard';
-import VisitorCount from '@/components/VisitorCount';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Link as RouterLink } from 'react-router-dom';
@@ -125,9 +124,6 @@ const Index = () => {
             <RouterLink to="/contact">
                 <Button size="lg">Contact Me</Button>
             </RouterLink>
-            <div className="mt-6">
-                <VisitorCount />
-            </div>
         </div>
       </SectionWrapper>
     </div>
