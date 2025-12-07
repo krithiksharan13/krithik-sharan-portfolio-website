@@ -10,6 +10,15 @@ export interface ExperienceItem {
 
 export const professionalExperiences: ExperienceItem[] = [
   {
+    role: 'AI Automation Engineer',
+    company: 'INOOKEY - Birmingham, United Kingdom',
+    duration: 'November 2025 - Present',
+    description: 'Working with N8N automations and workflows based on client requirements.',
+    achievements: [
+      'Working with N8N automations and workflows based on client requirements',
+    ],
+  },
+  {
     role: 'Data Analyst-BI Developer',
     company: 'Radiant Ventures',
     duration: 'November 2024 - September 2025',
