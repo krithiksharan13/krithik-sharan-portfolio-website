@@ -10,7 +10,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Trophy } from 'lucide-react';
+import { Github, ExternalLink, Trophy, Medal } from 'lucide-react';
 
 interface HackathonProjectCardProps {
   title: string;
@@ -18,6 +18,7 @@ interface HackathonProjectCardProps {
   githubUrl: string;
   liveUrl: string;
   isWinner?: boolean;
+  position?: string;
 }
 
 const itemVariants = {
@@ -25,18 +26,24 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const HackathonProjectCard = ({ title, description, githubUrl, liveUrl, isWinner }: HackathonProjectCardProps) => {
+const HackathonProjectCard = ({ title, description, githubUrl, liveUrl, isWinner, position }: HackathonProjectCardProps) => {
   return (
     <motion.div variants={itemVariants}>
       <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 group relative">
-        {isWinner && (
-          <div className="absolute top-4 right-4 z-10">
+        <div className="absolute top-4 right-4 z-10 flex gap-2">
+          {isWinner && (
             <Badge className="bg-yellow-500 text-yellow-950 flex items-center gap-1">
               <Trophy className="h-3 w-3" />
               Winner
             </Badge>
-          </div>
-        )}
+          )}
+          {position && (
+            <Badge variant="secondary" className="flex items-center gap-1">
+              <Medal className="h-3 w-3" />
+              {position}
+            </Badge>
+          )}
+        </div>
         <CardHeader>
           <CardTitle className="pr-16">{title}</CardTitle>
         </CardHeader>

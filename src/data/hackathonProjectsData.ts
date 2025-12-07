@@ -5,6 +5,7 @@ export interface HackathonProject {
   githubUrl: string;
   liveUrl: string;
   isWinner?: boolean;
+  position?: string;
 }
 
 export const hackathonProjects: HackathonProject[] = [
@@ -26,6 +27,7 @@ export const hackathonProjects: HackathonProject[] = [
     description: 'Our submission to the Hack4Unity Hackathon - A beginner friendly hackathon centered around creating an app or software that will create more unity between people! We came in 5th amidst 90+ Submissions. Polyglot Harmony AI Bot was created to help people communicate naturally, in their own voice, without linguistic friction. A tool that understands how we speak — not how a textbook expects us to.',
     githubUrl: 'https://github.com/krithiksharan13/Hack4Unity-Polyglot-Harmony-AI-Bot',
     liveUrl: 'https://polyglot-harmony-ai-bot.onrender.com/',
+    position: '5th',
   },
   {
     title: 'DevOne Hack',
