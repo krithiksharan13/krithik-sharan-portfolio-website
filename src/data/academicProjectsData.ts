@@ -1,6 +1,12 @@
+import crowdDetectionImg from '@/assets/academic/crowd-detection.png';
+import leedsCrimeImg from '@/assets/academic/leeds-crime.png';
+import dogRehomingImg from '@/assets/academic/dog-rehoming.png';
+import globalClimateImg from '@/assets/academic/global-climate.png';
+
 export interface AcademicProject {
   title: string;
   emoji: string;
+  image: string;
   tag: 'Undergraduate' | 'Postgraduate';
   subtitle: string;
   developers?: string[];
@@ -20,6 +26,7 @@ export const academicProjects: AcademicProject[] = [
   {
     title: "Crowd Detection for Social Distance Monitoring",
     emoji: "🧍‍♂️",
+    image: crowdDetectionImg,
     tag: "Undergraduate",
     subtitle: "Final Year B.Tech Project – Information Technology | Sri Sivasubramaniya Nadar College of Engineering, June 2022",
     developers: [
@@ -54,6 +61,7 @@ export const academicProjects: AcademicProject[] = [
   {
     title: "Leeds Crime Patterns: A Comparative Analysis of Student Areas",
     emoji: "🏙️",
+    image: leedsCrimeImg,
     tag: "Postgraduate",
     subtitle: "Group Data Analysis Project | University of Leeds",
     overview: "A group data-analysis project examining 12 months of street-level crime data in Leeds to identify whether student-heavy wards exhibit a statistically distinct crime profile compared to city-centre and other residential areas.",
@@ -83,6 +91,7 @@ export const academicProjects: AcademicProject[] = [
   {
     title: "Dog Rehoming Time Analysis",
     emoji: "🐕",
+    image: dogRehomingImg,
     tag: "Postgraduate",
     subtitle: "Coursework: R Statistics | University of Leeds",
     overview: "A statistical investigation into whether dog breed influences rehoming time in animal shelters. The analysis applies classical probability modelling and inference techniques at a postgraduate level.",
@@ -110,6 +119,7 @@ export const academicProjects: AcademicProject[] = [
   {
     title: "Global Climate Attitudes Modelling",
     emoji: "🌍",
+    image: globalClimateImg,
     tag: "Postgraduate",
     subtitle: "Machine Learning Project | UNDP Peoples' Climate Vote 2024 Dataset",
     overview: "A machine-learning project analysing global climate attitudes using supervised and unsupervised learning on the UNDP Peoples' Climate Vote 2024 dataset.",
