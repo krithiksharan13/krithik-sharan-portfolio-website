@@ -29,6 +29,7 @@ interface AcademicProjectCardProps extends AcademicProject {}
 const AcademicProjectCard = ({
   title,
   emoji,
+  image,
   tag,
   subtitle,
   developers,
@@ -46,9 +47,13 @@ const AcademicProjectCard = ({
   return (
     <motion.div variants={itemVariants}>
       <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1 group">
-        {/* Header with emoji background */}
-        <div className="aspect-video overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-background flex items-center justify-center relative">
-          <span className="text-7xl">{emoji}</span>
+        {/* Header with image */}
+        <div className="aspect-video overflow-hidden relative">
+          <img 
+            src={image} 
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
           <Badge 
             className={`absolute top-3 right-3 ${
               tag === 'Postgraduate' 
