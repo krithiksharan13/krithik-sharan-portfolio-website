@@ -84,7 +84,7 @@ const Portfolio = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
-          className="space-y-4 max-w-4xl mx-auto"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {academicProjects.map((project) => (
             <AcademicProjectCard key={project.title} {...project} />
