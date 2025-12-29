@@ -1,8 +1,10 @@
 import ProjectCard from '../components/ProjectCard';
 import HackathonProjectCard from '../components/HackathonProjectCard';
+import AcademicProjectCard from '../components/AcademicProjectCard';
 import { motion } from 'framer-motion';
 import { projects } from '@/data/projectsData';
 import { hackathonProjects } from '@/data/hackathonProjectsData';
+import { academicProjects } from '@/data/academicProjectsData';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -62,6 +64,30 @@ const Portfolio = () => {
         >
           {hackathonProjects.map((project) => (
             <HackathonProjectCard key={project.title} {...project} />
+          ))}
+        </motion.div>
+
+        {/* Academic Projects Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12 mt-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold">📘 Academic Projects</h2>
+          <div className="w-20 h-1 bg-primary mx-auto mt-2"></div>
+        </motion.div>
+        
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="space-y-4 max-w-4xl mx-auto"
+        >
+          {academicProjects.map((project) => (
+            <AcademicProjectCard key={project.title} {...project} />
           ))}
         </motion.div>
       </div>
