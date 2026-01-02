@@ -7,7 +7,11 @@ export const otherExperiences: ExperienceItem[] = [
     company: 'The University of Leeds - Leeds University Union',
     duration: 'November 2025 - present',
     description: 'Selected as the Faculty Officer Representing all the Engineering and Physical Sciences Departments.',
-    achievements: [],
+    achievements: [
+      'Created and launched the official EPS Student Community Instagram, establishing a single faculty-wide communication channel that supports 100+ EPS students and improves reach, awareness, and engagement across all schools.',
+      'Represented EPS PGT students in quality assurance, international student life, and inter-school communication initiatives, collecting, synthesising, and escalating student feedback to influence faculty-level discussions and student experience improvements.',
+      'Actively participated in FTSEC meetings, formally presenting student concerns and insights, and ensuring PGT perspectives were reflected in faculty decisions, policy discussions, and cross-school coordination.',
+    ],
   },
   {
     role: 'Freelance UI Designer',
