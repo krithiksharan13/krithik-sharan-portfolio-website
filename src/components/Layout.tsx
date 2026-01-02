@@ -1,6 +1,5 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import PortfolioAssistant from '@/components/PortfolioAssistant';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 
@@ -15,7 +14,6 @@ const Layout = () => {
         </Suspense>
       </main>
       <Footer />
-      <PortfolioAssistant />
     </div>
   );
 };

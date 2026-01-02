@@ -2,6 +2,13 @@ import { ExperienceItem } from './professionalExperience';
 
 export const volunteeringData: ExperienceItem[] = [
   {
+    role: "Academic Support Volunteer",
+    company: "IntoUniversity",
+    duration: "December 2025 - Present",
+    description: "Tutoring Secondary school children in Science and Math, providing guidance on University selection.",
+    achievements: []
+  },
+  {
     role: "Self-Organized Volunteer Educator for Government School Rural children",
     company: "Independent Initiative",
     duration: "November 2024 - August 2025",
