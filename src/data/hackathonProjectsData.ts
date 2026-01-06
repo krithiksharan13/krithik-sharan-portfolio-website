@@ -28,6 +28,7 @@ export const hackathonProjects: HackathonProject[] = [
     description: 'Our submission to the Horror Hacks Hackathon - A beginner friendly hackathon centered all about Halloween! Spooky Maze is an AI-powered, web-based, point-and-click puzzle horror game. We challenged ourselves to create a heart-pounding psychological experience using minimal design and eerie ambiance, all within a browser. The game tests a simple question: Can logic survive panic?',
     githubUrl: 'https://github.com/krithiksharan13/Horror-Hacks-Hackathon-2025',
     liveUrl: 'https://horror-hacks-hackathon-2025.onrender.com/',
+    position: 'Honorable Mention',
   },
   {
     title: 'Polyglot Harmony AI Bot',
