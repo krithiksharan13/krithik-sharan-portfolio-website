@@ -38,9 +38,9 @@ const HackathonProjectCard = ({ title, description, githubUrl, liveUrl, isWinner
             </Badge>
           )}
           {position && (
-            <Badge variant="secondary" className="flex items-center gap-1">
-              <Medal className="h-3 w-3" />
-              {position}
+            <Badge variant="secondary" className="flex items-center gap-1 text-center leading-tight py-1">
+              <Medal className="h-3 w-3 flex-shrink-0" />
+              <span className="whitespace-pre-line">{position.replace(' ', '\n')}</span>
             </Badge>
           )}
         </div>
