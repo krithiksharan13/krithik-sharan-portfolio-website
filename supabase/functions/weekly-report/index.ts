@@ -31,6 +31,43 @@ serve(async (req) => {
   try {
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!
     const supabaseKey = Deno.env.get('SUPABASE_ANON_KEY')!
+
+    // Authentication: allow cron job via secret or authenticated users via JWT
+    const cronSecret = Deno.env.get('CRON_SECRET')
+    const providedCronSecret = req.headers.get('x-cron-secret')
+    const authHeader = req.headers.get('Authorization')
+
+    let isCronJob = false
+    if (cronSecret && providedCronSecret === cronSecret) {
+      isCronJob = true
+      console.log('Request authenticated via cron secret')
+    }
+
+    if (!isCronJob) {
+      if (!authHeader?.startsWith('Bearer ')) {
+        return new Response(
+          JSON.stringify({ error: 'Unauthorized' }),
+          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        )
+      }
+
+      const supabaseAuth = createClient(supabaseUrl, supabaseKey, {
+        global: { headers: { Authorization: authHeader } }
+      })
+
+      const token = authHeader.replace('Bearer ', '')
+      const { data, error: claimsError } = await supabaseAuth.auth.getClaims(token)
+      if (claimsError || !data?.claims) {
+        console.error('Auth validation failed:', claimsError)
+        return new Response(
+          JSON.stringify({ error: 'Unauthorized' }),
+          { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        )
+      }
+
+      console.log('Request authenticated via JWT for user:', data.claims.sub)
+    }
+
     const supabase = createClient(supabaseUrl, supabaseKey)
 
     console.log('Starting weekly report generation...')
