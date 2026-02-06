@@ -7,6 +7,8 @@ import { Link as RouterLink } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { educationData } from '@/data/educationData';
 import { projects } from '@/data/projectsData';
+import { academicProjects } from '@/data/academicProjectsData';
+import { hackathonProjects } from '@/data/hackathonProjectsData';
 
 const SectionWrapper = ({ children, className }: { children: React.ReactNode, className?: string }) => (
     <motion.section
@@ -28,7 +30,21 @@ const SectionHeader = ({ title }: { title: string }) => (
 );
 
 const Index = () => {
-  const featuredProjects = projects.slice(0, 3);
+  const featuredProjectTitles = [
+    'Leeds Crime Patterns: A Comparative Analysis of Student Areas',
+    'A/B Testing Analysis: Mutual Fund Risk Label Impact',
+    'CheerpJ 2025',
+  ];
+  
+  const academicFeatured = academicProjects
+    .filter(p => featuredProjectTitles.includes(p.title))
+    .map(p => ({ title: p.title, description: p.overview || '', tools: p.tools, imageUrl: p.image, githubUrl: p.githubUrl }));
+  const portfolioFeatured = projects
+    .filter(p => featuredProjectTitles.includes(p.title));
+  const hackathonFeatured = hackathonProjects
+    .filter(p => featuredProjectTitles.includes(p.title))
+    .map(p => ({ title: p.title, description: p.description, tools: [] as string[], imageUrl: '', githubUrl: p.githubUrl }));
+  const featuredProjects = [...academicFeatured, ...portfolioFeatured, ...hackathonFeatured];
   return (
     <div>
       <Hero />
@@ -57,12 +73,21 @@ const Index = () => {
       <SectionWrapper>
         <div className="container mx-auto px-4">
             <SectionHeader title="Latest Experience" />
-            <div className="max-w-3xl mx-auto text-center text-lg text-foreground/80 space-y-4 mb-8">
-                <h3 className="text-2xl font-semibold text-primary">Data Analyst-BI Developer</h3>
-                <p className="font-medium text-xl">Radiant Ventures | November 2024 - September 2025</p>
-                <p>
-                  Led data analysis initiatives across multiple departments, developed interactive dashboards, and implemented machine learning models to predict the Risk Factor of Investment.
-                </p>
+            <div className="max-w-3xl mx-auto text-center text-lg text-foreground/80 space-y-6 mb-8">
+                <div>
+                  <h3 className="text-2xl font-semibold text-primary">AI Automation Engineer</h3>
+                  <p className="font-medium text-xl">INOOKEY - Birmingham, United Kingdom | November 2025 - Present</p>
+                  <p>
+                    Working with N8N automations and workflows based on client requirements, automating client-facing workflows and conducting competitor market analysis.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-primary">PGT Faculty Officer</h3>
+                  <p className="font-medium text-xl">The University of Leeds | Current</p>
+                  <p>
+                    Supporting postgraduate taught students and faculty with academic and administrative matters.
+                  </p>
+                </div>
             </div>
             <div className="text-center">
                 <RouterLink to="/experience">
@@ -78,7 +103,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
             <SectionHeader title="Education" />
             <div className="max-w-3xl mx-auto text-lg text-foreground/80 space-y-8 mb-8">
-              {educationData.map((edu, index) => (
+              {educationData.slice(0, 2).map((edu, index) => (
                 <div key={index} className="text-center">
                   <h3 className="text-xl font-semibold text-primary">{edu.institution}</h3>
                   <p className="font-medium text-foreground/70">{edu.location}</p>

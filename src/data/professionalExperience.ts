@@ -16,6 +16,9 @@ export const professionalExperiences: ExperienceItem[] = [
     description: 'Working with N8N automations and workflows based on client requirements.',
     achievements: [
       'Working with N8N automations and workflows based on client requirements',
+      'Automated 2 client-facing workflows using n8n, resulting in a 30% reduction in manual effort and 25% faster process turnaround.',
+      'Identified 8+ critical business and technical weak spots by developing a Business Risk & Loophole Assessment Report for a major project, improving overall risk visibility.',
+      'Conducted competitor market analysis across ~10 competitors, uncovering 3+ market gaps and proposing 2 strategic recommendations to support product positioning.',
     ],
   },
   {

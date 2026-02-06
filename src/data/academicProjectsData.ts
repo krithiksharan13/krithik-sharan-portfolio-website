@@ -24,41 +24,6 @@ export interface AcademicProject {
 
 export const academicProjects: AcademicProject[] = [
   {
-    title: "Crowd Detection for Social Distance Monitoring",
-    emoji: "🧍‍♂️",
-    image: crowdDetectionImg,
-    tag: "Undergraduate",
-    subtitle: "Final Year B.Tech Project – Information Technology | Sri Sivasubramaniya Nadar College of Engineering, June 2022",
-    developers: [
-      "Jajula Abhaya Chetna (185002039)",
-      "S A Krithik Sharan (185002052)"
-    ],
-    abstract: "An AI-based surveillance system designed to automatically monitor and detect violations of social distancing norms using CCTV video feeds. Built during the COVID-19 pandemic to address the impracticality of manual enforcement in crowded public spaces. The system leverages deep learning and computer vision techniques to detect humans, estimate real-world distances, and flag violations in real time.",
-    objectives: [
-      "Detect humans in surveillance footage",
-      "Apply perspective transformation for real-world distance estimation",
-      "Identify and classify social distancing violations",
-      "Visualise counts of safe, at-risk, and violating individuals"
-    ],
-    methods: [
-      "YOLOv3 (COCO-trained) for object detection",
-      "Perspective transformation and Euclidean distance calculations"
-    ],
-    tools: ["Python 3.9.1", "OpenCV", "NumPy", "SciPy", "Google Colab", "Windows environment"],
-    results: [
-      "Improved accuracy via dynamic thresholding",
-      "Effective performance on PETS2009 and real-world CCTV footage",
-      "Outputs generated in both original and bird's-eye views"
-    ],
-    futureWork: [
-      "Improve robustness for dense crowds and varying heights",
-      "Integrate alerts (SMS / alarms)",
-      "Extend to mask detection and heatmaps"
-    ],
-    disclaimer: "This project was developed strictly for academic purposes. All video data used was either publicly available or simulated to preserve confidentiality.",
-    githubUrl: "https://github.com/krithiksharan13/Crowd-Detection-for-Social-Distance-Monitoring"
-  },
-  {
     title: "Leeds Crime Patterns: A Comparative Analysis of Student Areas",
     emoji: "🏙️",
     image: leedsCrimeImg,
@@ -145,5 +110,40 @@ export const academicProjects: AcademicProject[] = [
       "Zhenny Marifatul Husna"
     ],
     githubUrl: "https://github.com/krithiksharan13/global-climate-attitudes-modelling"
+  },
+  {
+    title: "Crowd Detection for Social Distance Monitoring",
+    emoji: "🧍‍♂️",
+    image: crowdDetectionImg,
+    tag: "Undergraduate",
+    subtitle: "Final Year B.Tech Project – Information Technology | Sri Sivasubramaniya Nadar College of Engineering, June 2022",
+    developers: [
+      "Jajula Abhaya Chetna (185002039)",
+      "S A Krithik Sharan (185002052)"
+    ],
+    abstract: "An AI-based surveillance system designed to automatically monitor and detect violations of social distancing norms using CCTV video feeds. Built during the COVID-19 pandemic to address the impracticality of manual enforcement in crowded public spaces. The system leverages deep learning and computer vision techniques to detect humans, estimate real-world distances, and flag violations in real time.",
+    objectives: [
+      "Detect humans in surveillance footage",
+      "Apply perspective transformation for real-world distance estimation",
+      "Identify and classify social distancing violations",
+      "Visualise counts of safe, at-risk, and violating individuals"
+    ],
+    methods: [
+      "YOLOv3 (COCO-trained) for object detection",
+      "Perspective transformation and Euclidean distance calculations"
+    ],
+    tools: ["Python 3.9.1", "OpenCV", "NumPy", "SciPy", "Google Colab", "Windows environment"],
+    results: [
+      "Improved accuracy via dynamic thresholding",
+      "Effective performance on PETS2009 and real-world CCTV footage",
+      "Outputs generated in both original and bird's-eye views"
+    ],
+    futureWork: [
+      "Improve robustness for dense crowds and varying heights",
+      "Integrate alerts (SMS / alarms)",
+      "Extend to mask detection and heatmaps"
+    ],
+    disclaimer: "This project was developed strictly for academic purposes. All video data used was either publicly available or simulated to preserve confidentiality.",
+    githubUrl: "https://github.com/krithiksharan13/Crowd-Detection-for-Social-Distance-Monitoring"
   }
 ];
