@@ -9,6 +9,7 @@ import { educationData } from '@/data/educationData';
 import { projects } from '@/data/projectsData';
 import { academicProjects } from '@/data/academicProjectsData';
 import { hackathonProjects } from '@/data/hackathonProjectsData';
+import cheerpjImage from '@/assets/hackathon/cheerpj.png';
 
 const SectionWrapper = ({ children, className }: { children: React.ReactNode, className?: string }) => (
     <motion.section
@@ -43,7 +44,7 @@ const Index = () => {
     .filter(p => featuredProjectTitles.includes(p.title));
   const hackathonFeatured = hackathonProjects
     .filter(p => featuredProjectTitles.includes(p.title))
-    .map(p => ({ title: p.title, description: p.description, tools: [] as string[], imageUrl: '', githubUrl: p.githubUrl }));
+    .map(p => ({ title: p.title, description: p.description, tools: [] as string[], imageUrl: cheerpjImage, githubUrl: p.githubUrl }));
   const featuredProjects = [...academicFeatured, ...portfolioFeatured, ...hackathonFeatured];
   return (
     <div>
