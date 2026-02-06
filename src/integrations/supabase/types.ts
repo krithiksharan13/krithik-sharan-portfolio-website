@@ -10,119 +10,17 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.5"
+    PostgrestVersion: "14.1"
   }
   public: {
     Tables: {
-      visitor_rate_limits: {
-        Row: {
-          created_at: string
-          id: string
-          ip_address: unknown
-          request_count: number
-          visitor_id: string
-          window_start: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          ip_address: unknown
-          request_count?: number
-          visitor_id: string
-          window_start?: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          ip_address?: unknown
-          request_count?: number
-          visitor_id?: string
-          window_start?: string
-        }
-        Relationships: []
-      }
-      visitor_sessions: {
-        Row: {
-          created_at: string
-          id: string
-          ip_address: unknown | null
-          is_new_visitor: boolean | null
-          page_url: string | null
-          session_end: string | null
-          session_start: string
-          time_spent_seconds: number | null
-          user_agent: string | null
-          visitor_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          ip_address?: unknown | null
-          is_new_visitor?: boolean | null
-          page_url?: string | null
-          session_end?: string | null
-          session_start?: string
-          time_spent_seconds?: number | null
-          user_agent?: string | null
-          visitor_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          ip_address?: unknown | null
-          is_new_visitor?: boolean | null
-          page_url?: string | null
-          session_end?: string | null
-          session_start?: string
-          time_spent_seconds?: number | null
-          user_agent?: string | null
-          visitor_id?: string
-        }
-        Relationships: []
-      }
-      weekly_reports: {
-        Row: {
-          average_time_spent_seconds: number
-          created_at: string
-          id: string
-          new_visitors_week: number
-          report_date: string
-          total_visitors_lifetime: number
-          total_visitors_week: number
-        }
-        Insert: {
-          average_time_spent_seconds?: number
-          created_at?: string
-          id?: string
-          new_visitors_week?: number
-          report_date: string
-          total_visitors_lifetime?: number
-          total_visitors_week?: number
-        }
-        Update: {
-          average_time_spent_seconds?: number
-          created_at?: string
-          id?: string
-          new_visitors_week?: number
-          report_date?: string
-          total_visitors_lifetime?: number
-          total_visitors_week?: number
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      cleanup_old_rate_limits: {
-        Args: Record<PropertyKey, never>
-        Returns: undefined
-      }
-      get_total_visitor_count: {
-        Args: Record<PropertyKey, never>
-        Returns: number
-      }
+      [_ in never]: never
     }
     Enums: {
       [_ in never]: never
