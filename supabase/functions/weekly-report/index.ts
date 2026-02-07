@@ -214,10 +214,14 @@ This automated report is generated every Saturday from your portfolio website an
       }
     )
   } catch (error: unknown) {
+    // Log full error details server-side for debugging
     console.error('Error in weekly report function:', error)
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    if (error instanceof Error) {
+      console.error('Error stack:', error.stack)
+    }
+    // Return generic error message to clients — never expose internal details
     return new Response(
-      JSON.stringify({ error: errorMessage }),
+      JSON.stringify({ error: 'Failed to generate weekly report' }),
       {
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
