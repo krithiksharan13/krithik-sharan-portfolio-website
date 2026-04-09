@@ -13,6 +13,7 @@ const navLinks = [
   { to: '/education', label: 'Education' },
   { to: '/volunteering', label: 'Volunteering' },
   { to: '/portfolio', label: 'Portfolio' },
+  { to: '/certificates', label: 'Certificates' },
   { to: '/contact', label: 'Contact' },
 ];
 
