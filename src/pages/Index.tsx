@@ -84,7 +84,7 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-semibold text-primary">PGT Faculty Officer</h3>
-                  <p className="font-medium text-xl">The University of Leeds | Current</p>
+                  <p className="font-medium text-xl">The University of Leeds | November 2025 - Present</p>
                   <p>
                     Supporting postgraduate taught students and faculty with academic and administrative matters.
                   </p>
